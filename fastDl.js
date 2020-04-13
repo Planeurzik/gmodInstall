@@ -13,12 +13,12 @@ fs.readdirSync(__dirname+'/addons').forEach((addon) => {
         var addonSplit = addon.split('_');
         var workshopId = addonSplit[addonSplit.length - 1];
         if (/^\d+$/.test(workshopId)) {
-            fs.appendFileSync(downloadFilePath, 'resource.AddWorkshop(' + workshopId + ')';
+            fs.appendFileSync(downloadFilePath, 'resource.AddWorkshop("' + workshopId + '")';
         }
     }
 });
 
-if (gamemodeId !== '') fs.appendFileSync(downloadFilePath, 'resource.AddWorkshop(' + gamemodeId + ')';
-if (mapId !== '') fs.appendFileSync(downloadFilePath, 'resource.AddWorkshop(' + mapId + ')';
+if (gamemodeId !== '') fs.appendFileSync(downloadFilePath, 'resource.AddWorkshop("' + gamemodeId + '")';
+if (mapId !== '') fs.appendFileSync(downloadFilePath, 'resource.AddWorkshop("' + mapId + '")';
 
 console.log('All addons added !');
