@@ -1,5 +1,4 @@
-sudo apt-get update -y && sudo apt-get upgrade -y
-sudo apt-get install apache2 curl lib32gcc1 lib32stdc++6 lib32tinfo5 screen nodejs -y
+sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get install apache2 curl lib32gcc1 lib32stdc++6 lib32tinfo5 screen nodejs -y    
 gmodpath=$(pwd)
 wget http://media.steampowered.com/client/steamcmd_linux.tar.gz
 tar -xvzf steamcmd_linux.tar.gz
