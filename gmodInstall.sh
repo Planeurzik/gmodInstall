@@ -41,13 +41,13 @@ fs.readdirSync(__dirname+'/addons').forEach((addon) => {
         var addonSplit = addon.split('_');
         var workshopId = addonSplit[addonSplit.length - 1];
         if (/^\d+$/.test(workshopId)) {
-            fs.appendFileSync(downloadFilePath, 'resource.AddWorkshop("' + workshopId + '")\n');
+            fs.appendFileSync(downloadFilePath, 'resource.AddWorkshop(\"' + workshopId + '\")\n');
         }
     }
 });
 
-if (gamemodeId !== '') fs.appendFileSync(downloadFilePath, 'resource.AddWorkshop("' + gamemodeId + '")\n');
-if (mapId !== '') fs.appendFileSync(downloadFilePath, 'resource.AddWorkshop("' + mapId + '")\n');
+if (gamemodeId !== '') fs.appendFileSync(downloadFilePath, 'resource.AddWorkshop(\"' + gamemodeId + '\")\n');
+if (mapId !== '') fs.appendFileSync(downloadFilePath, 'resource.AddWorkshop(\"' + mapId + '\")\n');
 
 console.log('All addons added !');">$gmodpath/gmod/garrysmod/fastDl.js
 mkdir $gmodpath/gmod/garrysmod/disabled_addons
